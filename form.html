@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Lists</title>
+  <style>
+    :root {
+    --primary-color: #c72727;
+    --secondary-color: #F99500;
+    --light-grey: #f3f3f3;
+    --dark-color: #333;
+    --white-color: #fff;
+    --new-color: #f2f2f2;
+    --max-width: 1100px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      line-height: 1.8;
+      background: var(--new-color);
+    }
+
+
+    #container {
+      max-width: var(--max-width);
+      margin: 2rem auto;
+      padding: 2rem;
+      
+    }
+
+    /* input[type=text], email,  textarea{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    } */
+
+    .form-group {
+      margin-top: 1.5rem;
+    }
+
+
+    .form-group input,
+    textarea  {
+      width: 100%;
+      padding: 0.8rem;
+      border: #ddd solid 0.1rem;
+      border-radius: 0.5rem;
+      
+    }
+
+    /* .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: #ddd solid 0.1rem;
+      border-radius: 0.5rem;
+      
+    } */
+
+
+    .form-group label {
+      display: block;
+      color: var(--dark-color);
+    }
+
+
+    .peace input {
+      width: 30%;
+      padding: 0.8rem;
+      border: #ddd solid 0.1rem;
+      border-radius: 0.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem;
+      width: 10%;
+      margin-top: 0.5rem;
+      background: var(--secondary-color);
+      color: var(--white-color);
+      border-radius: 0.5rem;
+    }
+
+    .btn:hover {
+      background: var(--dark-color);
+      color: var(--primary-color);
+    }
+
+    
+
+    
+
+
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <form action="process.php">
+      <div class="form-group">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" value="Stephanie">
+      </div>
+      <div class="form-group">
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" value="Buffet">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Enter Number</label>
+        <input type="tel" name="phone" id="phone">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="50" rows="10"></textarea>
+      </div>
+      <div>
+        <label for="sex">Sex</label>
+        <select name="sex" id="sex">
+          <option value="Male">Male</option>
+          <option value="Female" selected>Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="peace">
+        <label for="age">Age</label><br>
+        <input type="number" name="age" id="age">
+      </div>
+      <div class="peace">
+        <label for="birthday">Birthday</label><br>
+        <input type="date" name="birthday" id="birthday">
+      </div>
+      <div>
+        <input type="checkbox" name="vehicle1" id="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" name="vehicle2" id="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" name="vehicle3" id="vehicle3" value="Baot">
+        <label for="vehicle3"> I have a boat</label>
+      </div>
+      <div>
+        <input type="radio" name="html" id="html">
+        <label for="html">HTML</label><br>
+        <input type="radio" name="php" id="php">
+        <label for="php">PHP</label><br>
+        <input type="radio" name="python" id="python">
+        <label for="python">PYTHON</label><br>
+        <input type="radio" name="javacript" id="javacript">
+        <label for="javacript">JAVACRIPT</label>
+      </div>
+      <div>
+        <label for="membership">Membership</label>
+        <input type="radio" name="membership" id="membership" value="simple"> Simple
+        <input type="radio" name="membership" id="membership" value="standard"> Standard
+        <input type="radio" name="membership" id="membership" value="super" checked> Super
+        <input type="radio" name="membership" id="membership" value="excellent"> Excellent
+      </div>
+      <div>
+        <label for="membership">Likes..</label>
+        <input type="checkbox" name="likes" id="likes" value="bike"> Bike
+        <input type="checkbox" name="likes" id="likes" value="car"> Car
+        <input type="checkbox" name="likes" id="likes" value="boat"> Boat
+        <input type="checkbox" name="likes" id="likes" value="ship"> Ship
+      </div>
+      <input type="submit" value="Submit" class="btn">
+
+      <!-- Button Tag -->
+      <!-- <button type="submit">Submit</button> -->
+      <button type="reset" class="btn">Reset</button>
+    </form>
+  </div>
+</body>
+</html>
